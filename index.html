@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chat UI</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #ece5dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.chat-container {
+    width: 360px;
+    height: 560px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+.chat-header {
+    background-color: #075e54;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px 15px 0 0;
+}
+
+.chat-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-header h3 {
+    font-size: 16px;
+}
+
+.chat-header p {
+    font-size: 12px;
+    color: #d0f0ea;
+}
+
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    background-image: url("https://i.imgur.com/8kmX1.jpg");
+    background-size: cover;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+
+.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+
+.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+.chat-footer button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #075e54;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    
+    <div class="chat-header">
+        <img src="blue-circle-with-white-user_78370-4707.avif" alt="user">
+        <div>
+            <h3>Peter</h3>
+            <p>online</p>
+        </div>
+    </div>
+
+    
+    <div class="chat-body">
+        <div class="message received">Hi! How are you?</div>
+        <div class="message sent">I'm good 😊</div>
+        <div class="message received">What are you doing?</div>
+        <div class="message sent">Learning HTML & CSS 👍</div>
+        <div class="message received">Nice! Keep going 💪</div>
+    </div>
+
+    
+    <div class="chat-footer">
+        <input type="text" placeholder="Type a message">
+        <button>Send</button>
+    </div>
+
+</div>
+
+</body>
+</html>
